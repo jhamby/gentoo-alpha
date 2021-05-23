@@ -1,0 +1,11 @@
+--- gjs-1.64.4.orig/gjs/error-types.cpp	2020-07-05 16:49:25.979761400 -0700
++++ gjs-1.64.4/gjs/error-types.cpp	2021-05-15 22:06:04.416478769 -0700
+@@ -31,7 +31,7 @@
+ // clang-format on
+ 
+ GType gjs_js_error_get_type(void) {
+-    static volatile GType g_type_id;
++    static GType g_type_id;
+ 
+     if (g_once_init_enter(&g_type_id)) {
+         static GEnumValue errors[] = {
